@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 12,
+        "columns_desktop": 3,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2"
+      }
+    },
+    "description": {
+      "type": "collection-description",
+      "settings": {
+        "show_description": true,
+        "show_sidebar": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "description"
+  ],
+  "products": [
+    {
+      "title": "Bamboo Plates",
+      "handle": "bamboo-plates",
+      "description": "Eco-friendly bamboo plates, perfect for everyday use. Durable, lightweight, and naturally antibacterial.",
+      "price": 1499,
+      "tags": ["Kitchen", "Dining", "Eco-friendly"],
+      "available": true
+    },
+    {
+      "title": "Bamboo Bowls",
+      "handle": "bamboo-bowls",
+      "description": "Sustainable bamboo bowls for soups, salads, and more. Naturally resistant to water and stains.",
+      "price": 1299,
+      "tags": ["Kitchen", "Dining", "Eco-friendly"],
+      "available": true
+    },
+    {
+      "title": "Bamboo Spoons",
+      "handle": "bamboo-spoons",
+      "description": "Handcrafted bamboo spoons, perfect for cooking and serving. Won't scratch your cookware.",
+      "price": 899,
+      "tags": ["Kitchen", "Utensils", "Eco-friendly"],
+      "available": true
+    },
+    {
+      "title": "Bamboo Serving Board",
+      "handle": "bamboo-serving-board",
+      "description": "Beautiful bamboo serving board for cheese, appetizers, or as a cutting board.",
+      "price": 2499,
+      "tags": ["Kitchen", "Serving", "Eco-friendly"],
+      "available": true
+    },
+    {
+      "title": "Bamboo Straws",
+      "handle": "bamboo-straws",
+      "description": "Reusable bamboo straws with cleaning brush. Perfect alternative to plastic straws.",
+      "price": 999,
+      "tags": ["Kitchen", "Eco-friendly", "Zero-waste"],
+      "available": true
+    },
+    {
+      "title": "Reusable Bamboo Cup",
+      "handle": "reusable-bamboo-cup",
+      "description": "Eco-friendly bamboo cup for hot and cold beverages. Includes silicone lid and sleeve.",
+      "price": 1699,
+      "tags": ["Kitchen", "Drinks", "Eco-friendly"],
+      "available": true
+    },
+    {
+      "title": "Bamboo Water Bottle",
+      "handle": "bamboo-water-bottle",
+      "description": "Insulated bamboo water bottle. Keeps drinks cold for 24 hours or hot for 12 hours.",
+      "price": 2999,
+      "tags": ["Kitchen", "Drinks", "Eco-friendly"],
+      "available": true
+    }
+  ]
+} 

@@ -1,0 +1,57 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 12,
+        "columns_desktop": 3,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2"
+      }
+    },
+    "description": {
+      "type": "collection-description",
+      "settings": {
+        "show_description": true,
+        "show_sidebar": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "description"
+  ],
+  "products": [
+    {
+      "title": "Bamboo Toothbrush",
+      "handle": "bamboo-toothbrush",
+      "description": "Eco-friendly bamboo toothbrush with soft bristles. 100% biodegradable handle.",
+      "price": 599,
+      "tags": ["Personal Care", "Bathroom", "Eco-friendly"],
+      "available": true
+    },
+    {
+      "title": "Bamboo Comb",
+      "handle": "bamboo-comb",
+      "description": "Natural bamboo comb with wide teeth. Perfect for all hair types and anti-static.",
+      "price": 899,
+      "tags": ["Personal Care", "Hair Care", "Eco-friendly"],
+      "available": true
+    },
+    {
+      "title": "Bamboo Cotton Earbuds",
+      "handle": "bamboo-cotton-earbuds",
+      "description": "100% biodegradable cotton earbuds with bamboo stems. Plastic-free packaging.",
+      "price": 499,
+      "tags": ["Personal Care", "Bathroom", "Zero-waste"],
+      "available": true
+    }
+  ]
+} 

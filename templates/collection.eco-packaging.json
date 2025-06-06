@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 12,
+        "columns_desktop": 3,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2"
+      }
+    },
+    "description": {
+      "type": "collection-description",
+      "settings": {
+        "show_description": true,
+        "show_sidebar": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "description"
+  ],
+  "products": [
+    {
+      "title": "Biodegradable Garbage Bags",
+      "handle": "biodegradable-garbage-bags",
+      "description": "100% biodegradable and compostable garbage bags. Made from plant-based materials.",
+      "price": 1299,
+      "tags": ["Packaging", "Home", "Biodegradable"],
+      "available": true
+    },
+    {
+      "title": "Recycled Gift Wrap Paper",
+      "handle": "recycled-gift-wrap-paper",
+      "description": "Beautiful gift wrap made from 100% recycled paper. Eco-friendly printing.",
+      "price": 899,
+      "tags": ["Packaging", "Gifts", "Recycled"],
+      "available": true
+    },
+    {
+      "title": "Biodegradable Bubble Wrap",
+      "handle": "biodegradable-bubble-wrap",
+      "description": "Eco-friendly alternative to traditional bubble wrap. Breaks down naturally.",
+      "price": 1499,
+      "tags": ["Packaging", "Shipping", "Biodegradable"],
+      "available": true
+    },
+    {
+      "title": "Plant-based Packaging Peanuts",
+      "handle": "plant-based-packaging-peanuts",
+      "description": "100% biodegradable packaging peanuts made from natural starch.",
+      "price": 999,
+      "tags": ["Packaging", "Shipping", "Biodegradable"],
+      "available": true
+    },
+    {
+      "title": "Reusable Jute Shopping Bags",
+      "handle": "reusable-jute-shopping-bags",
+      "description": "Durable jute shopping bags. Perfect alternative to plastic bags.",
+      "price": 1699,
+      "tags": ["Packaging", "Shopping", "Reusable"],
+      "available": true
+    },
+    {
+      "title": "Multi-layer Paper Bags",
+      "handle": "multi-layer-paper-bags",
+      "description": "Strong multi-layer paper bags for shopping and packaging.",
+      "price": 799,
+      "tags": ["Packaging", "Shopping", "Recyclable"],
+      "available": true
+    },
+    {
+      "title": "Premium Eco Gift Bags",
+      "handle": "premium-eco-gift-bags",
+      "description": "Luxury gift bags made from recycled materials with elegant designs.",
+      "price": 1999,
+      "tags": ["Packaging", "Gifts", "Premium"],
+      "available": true
+    }
+  ]
+} 

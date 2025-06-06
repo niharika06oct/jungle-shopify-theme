@@ -1,0 +1,57 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "products_per_page": 12,
+        "columns_desktop": 3,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2"
+      }
+    },
+    "description": {
+      "type": "collection-description",
+      "settings": {
+        "show_description": true,
+        "show_sidebar": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "description"
+  ],
+  "products": [
+    {
+      "title": "Reusable Bamboo Straws Set",
+      "handle": "reusable-bamboo-straws-set",
+      "description": "Set of 6 reusable bamboo straws with cleaning brush and cotton carry pouch.",
+      "price": 1499,
+      "tags": ["Home", "Kitchen", "Zero-waste"],
+      "available": true
+    },
+    {
+      "title": "Organic Cotton Kitchen Towels",
+      "handle": "organic-cotton-kitchen-towels",
+      "description": "Set of 4 organic cotton kitchen towels. Highly absorbent and durable alternative to paper towels.",
+      "price": 2499,
+      "tags": ["Home", "Kitchen", "Sustainable"],
+      "available": true
+    },
+    {
+      "title": "Beeswax Food Wraps",
+      "handle": "beeswax-food-wraps",
+      "description": "Set of 3 reusable beeswax food wraps. Natural alternative to plastic wrap.",
+      "price": 1899,
+      "tags": ["Home", "Kitchen", "Zero-waste"],
+      "available": true
+    }
+  ]
+} 
