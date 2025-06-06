@@ -1,0 +1,50 @@
+{%- style -%}
+  .footer {
+    padding: 2rem 0;
+    background-color: #2F4538;
+    color: white;
+  }
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .footer-links {
+    margin: 1rem 0;
+  }
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+{%- endstyle -%}
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="/search">Search</a>
+      <a href="/pages/about-us">About Us</a>
+      <a href="/pages/contact">Contact</a>
+      <a href="/policies/privacy-policy">Privacy Policy</a>
+      <a href="/policies/terms-of-service">Terms of Service</a>
+    </div>
+    <div>
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Footer"
+    }
+  ]
+}
+{% endschema %} 
