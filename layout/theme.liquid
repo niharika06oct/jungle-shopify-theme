@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.primary_color }}">
+
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
+    {%- endif -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {{ content_for_header }}
+
+    <style>
+      :root {
+        --primary-color: {{ settings.primary_color }};
+        --secondary-color: {{ settings.secondary_color }};
+        --accent-color: {{ settings.accent_color }};
+        --background-color: {{ settings.background_color }};
+        --text-color: {{ settings.text_color }};
+        
+        --font-heading: {{ settings.heading_font.family }}, sans-serif;
+        --font-body: {{ settings.body_font.family }}, sans-serif;
+      }
+
+      body {
+        font-family: var(--font-body);
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        color: var(--primary-color);
+      }
+
+      .btn {
+        background-color: var(--accent-color);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.2s;
+      }
+
+      .btn:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        padding: 1rem;
+        color: white;
+      }
+
+      .footer {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 2rem 0;
+        margin-top: 3rem;
+      }
+
+      .eco-badge {
+        background-color: var(--accent-color);
+        color: white;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        display: inline-block;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .product-card {
+        background: white;
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+  </head>
+
+  <body>
+    {% section 'header' %}
+
+    <main role="main">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+
+    {{ 'theme.js' | asset_url | script_tag }}
+  </body>
+</html> 

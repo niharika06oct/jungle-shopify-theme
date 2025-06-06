@@ -1,0 +1,151 @@
+<div class="header">
+  <div class="container">
+    <div class="header__content">
+      <div class="header__logo-wrapper">
+        <a href="/" class="header__logo-link">
+          {% if section.settings.logo != blank %}
+            <img 
+              src="{{ section.settings.logo | img_url: 'medium' }}"
+              alt="{{ shop.name }}"
+              class="header__logo"
+              width="{{ section.settings.logo_width }}"
+              height="auto"
+              loading="eager"
+            >
+          {% else %}
+            <span class="header__logo-text">{{ shop.name }}</span>
+          {% endif %}
+        </a>
+      </div>
+
+      <nav class="header__nav">
+        {% for link in section.settings.menu.links %}
+          <a href="{{ link.url }}" class="header__nav-link{% if link.active %} header__nav-link--active{% endif %}">
+            {{ link.title }}
+          </a>
+        {% endfor %}
+      </nav>
+
+      <div class="header__actions">
+        <a href="/search" class="header__action-link">
+          {% render 'icon-search' %}
+        </a>
+        
+        <a href="/cart" class="header__action-link header__cart">
+          {% render 'icon-cart' %}
+          <span class="header__cart-count">{{ cart.item_count }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.header__logo {
+  max-height: 50px;
+  width: auto;
+}
+
+.header__logo-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.header__nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.header__nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.header__nav-link:hover {
+  opacity: 0.8;
+}
+
+.header__nav-link--active {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.header__actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header__action-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.header__cart {
+  position: relative;
+}
+
+.header__cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent-color);
+  color: white;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  min-width: 18px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+  
+  .header__content {
+    justify-content: space-between;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 250,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo width",
+      "default": 100
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %} 
