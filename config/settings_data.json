@@ -21,6 +21,7 @@
       "hero": {
         "type": "hero",
         "settings": {
+          "background_image": "shopify://shop_images/ChatGPT_Image_Jun_4_2025_01_18_12_AM.png",
           "title": "Welcome to Bambooz",
           "subtitle": "Discover our collection of sustainable bamboo products",
           "button_label": "Shop Now",
@@ -30,6 +31,13 @@
       "footer": {
         "type": "footer",
         "settings": {}
+      },
+      "product-categories": {
+        "type": "product-categories",
+        "settings": {
+          "title": "Shop by Category",
+          "subtitle": "Explore our eco-friendly and sustainable products"
+        }
       }
     },
     "content_for_index": [],
