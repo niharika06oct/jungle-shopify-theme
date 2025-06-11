@@ -13,7 +13,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "logo": "shopify://shop_images/ChatGPT_Image_Jun_6_2025_11_21_55_PM.png",
+          "logo": "shopify://shop_images/ChatGPT_Image_Jun_11_2025_11_10_33_PM.png",
           "logo_width": 80,
           "menu": "main-menu"
         }
@@ -34,6 +34,19 @@
       },
       "product-categories": {
         "type": "product-categories",
+        "blocks": {
+          "category_Djfqj6": {
+            "type": "category",
+            "settings": {
+              "title": "Kitchen & Dining Collection",
+              "description": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "category_Djfqj6"
+        ],
         "settings": {
           "title": "Shop by Category",
           "subtitle": "Explore our eco-friendly and sustainable products"
