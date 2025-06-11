@@ -38,9 +38,10 @@
           "category_Djfqj6": {
             "type": "category",
             "settings": {
+              "image": "shopify://shop_images/ChatGPTImageJun4_2025_01_56_23AM.png",
               "title": "Kitchen & Dining Collection",
-              "description": "",
-              "link": ""
+              "description": "Kitchen essentials",
+              "link": "shopify://products/bamboo-cutlery"
             }
           }
         },
