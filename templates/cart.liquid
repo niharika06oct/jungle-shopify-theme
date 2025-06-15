@@ -1,0 +1,38 @@
+{% layout 'theme' %}
+
+<div class="page-width cart-page">
+  <h1>Your Cart</h1>
+
+  {% if cart.item_count > 0 %}
+    <form action="/cart" method="post" novalidate>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Qty</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in cart.items %}
+            <tr>
+              <td>{{ item.product.title }}</td>
+              <td>
+                <input type="number" name="updates[]" value="{{ item.quantity }}" min="0">
+              </td>
+              <td>{{ item.line_price | money }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <p><strong>Subtotal: {{ cart.total_price | money }}</strong></p>
+
+      <button type="submit" name="update">Update</button>
+      <a href="/checkout" class="btn">Checkout</a>
+    </form>
+  {% else %}
+    <p>Your cart is currently empty.</p>
+    <a href="/collections/all" class="btn">Continue Shopping</a>
+  {% endif %}
+</div>
