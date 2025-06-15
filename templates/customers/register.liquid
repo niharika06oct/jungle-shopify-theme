@@ -4,17 +4,20 @@
   <h1 class="page-title">Create Account</h1>
 
   {% form 'create_customer' %}
-    <label for="FirstName">First Name</label>
-    <input type="text" name="customer[first_name]" id="FirstName" required>
+    <div role="alert" class="form-error">
+      {{ form.errors }}
+    </div>
+    <label for="first-name">First Name</label>
+    <input type="text" name="customer[first_name]" id="first-name" required>
 
-    <label for="LastName">Last Name</label>
-    <input type="text" name="customer[last_name]" id="LastName" required>
+    <label for="last-name">Last Name</label>
+    <input type="text" name="customer[last_name]" id="last-name" required>
 
-    <label for="Email">Email</label>
-    <input type="email" name="customer[email]" id="Email" required>
+    <label for="email">Email</label>
+    <input type="email" name="customer[email]" id="email" required>
 
-    <label for="Password">Password</label>
-    <input type="password" name="customer[password]" id="Password" required>
+    <label for="password">Password</label>
+    <input type="password" name="customer[password]" id="password" required autocomplete="new-password">
 
     <button type="submit" class="btn">Create</button>
   {% endform %}
