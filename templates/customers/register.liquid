@@ -1,9 +1,7 @@
 {% layout 'theme' %}
 
-{% render 'customer-form-wrapper' %}
+{% render 'customer-form-wrapper', title: 'Create Account' %}
   {% block content %}
-    <h1 class="page-title">Create Account</h1>
-
     {% form 'create_customer' %}
       <div role="alert" class="form-error">
         {{ form.errors }}
