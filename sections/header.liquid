@@ -82,6 +82,14 @@
     </nav>
 
     <div class="header__actions">
+      {% if customer %}
+        <a href="/account" class="header-link">My Account</a>
+      {% else %}
+        <a href="/account/login" class="header-link">Login</a>
+        <span class="divider">|</span>
+        <a href="/account/register" class="header-link">Register</a>
+      {% endif %}
+
       <a href="/search" class="header__action-link">
         {% render 'icon-search' %}
       </a>
