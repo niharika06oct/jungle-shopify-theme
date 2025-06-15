@@ -1,0 +1,20 @@
+{% layout 'theme' %}
+
+{% capture content %}
+  {% form 'customer_login' %}
+    <div role="alert" class="form-errors">
+      {{ form.errors }}
+    </div>
+    <label for="email">Email</label>
+    <input type="email" name="customer[email]" id="email" required>
+
+    <label for="password">Password</label>
+    <input type="password" name="customer[password]" id="password" required autocomplete="current-password">
+
+    <button type="submit" class="btn">Login</button>
+  {% endform %}
+
+  <p><a href="/account/register">Create Account</a> | <a href="/account/recover">Forgot Password?</a></p>
+{% endcapture %}
+
+{% render 'customer-form-wrapper', title: 'Login', content: content %}
