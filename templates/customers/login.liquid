@@ -4,6 +4,7 @@
   <h1 class="page-title">Login</h1>
 
   {% form 'customer_login' %}
+    {{ form.errors }}
     <label for="email">email</label>
     <input type="email" name="customer[email]" id="email" required>
 
