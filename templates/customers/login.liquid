@@ -2,7 +2,9 @@
 
 {% capture content %}
   {% form 'customer_login' %}
-    {{ form.errors }}
+    <div role="alert" class="form-errors">
+      {{ form.errors }}
+    </div>
     <label for="email">Email</label>
     <input type="email" name="customer[email]" id="email" required>
 
