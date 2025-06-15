@@ -1,7 +1,6 @@
 {% layout 'theme' %}
 
-{% render 'customer-form-wrapper', title: 'Create Account' %}
-  {% block content %}
+{% capture content %}
     {% form 'create_customer' %}
       <div role="alert" class="form-error">
         {{ form.errors }}
