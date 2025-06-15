@@ -4,7 +4,9 @@
   <h1 class="page-title">Create Account</h1>
 
   {% form 'create_customer' %}
-    {{ form.errors }}
+    <div role="alert" class="form-error">
+      {{ form.errors }}
+    </div>
     <label for="first-name">First Name</label>
     <input type="text" name="customer[first_name]" id="first-name" required>
 
