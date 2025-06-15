@@ -1,0 +1,17 @@
+{% layout 'theme' %}
+
+<div class="page-width page-content">
+  <h1 class="page-title">Login</h1>
+
+  {% form 'customer_login' %}
+    <label for="CustomerEmail">Email</label>
+    <input type="email" name="customer[email]" id="CustomerEmail" required>
+
+    <label for="CustomerPassword">Password</label>
+    <input type="password" name="customer[password]" id="CustomerPassword" required>
+
+    <button type="submit" class="btn">Login</button>
+  {% endform %}
+
+  <p><a href="/account/register">Create Account</a> | <a href="/account/recover">Forgot Password?</a></p>
+</div>
